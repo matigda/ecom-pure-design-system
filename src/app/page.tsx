@@ -11,7 +11,7 @@ const ProductCard = () => {
   );
 }
 
-const Section = ({children, classNames=''}) => {
+const Section = ({children, classNames=''}: {children: any, classNames: string}) => {
   return (
       <section className={`border-2 border-black ${classNames}`}>{children}</section>
   )
@@ -35,7 +35,8 @@ const MockActiveFilter = () => {
 }
 
 export default function Home() {
-  return (
+  // @ts-ignore
+    return (
       <main className={'flex flex-col gap-2'}>
 
         <Section classNames={'flex justify-between px-10 bg-gray-100'}>
@@ -48,7 +49,7 @@ export default function Home() {
         </Section>
 
         <Section classNames={'flex flex-col gap-2 px-10'}>
-            <Section classNames={'flex py-2 px-2'}>Home > Category > Subcategory </Section>
+            <Section classNames={'flex py-2 px-2'}>Home `{'>'}` Category `{'>'}` Subcategory </Section>
             <Section classNames={'flex py-2 px-2'}>Header 1</Section>
             <Section classNames={'flex py-2 px-2 gap-2'}><MockFilter /><MockFilter /><MockFilter /><MockFilter /></Section>
         </Section>
