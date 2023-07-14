@@ -51,11 +51,11 @@ export default function Home() {
         <Section classNames={'flex flex-col gap-2 px-10'}>
             <Section classNames={'flex py-2 px-2'}>Home `{'>'}` Category `{'>'}` Subcategory </Section>
             <Section classNames={'flex py-2 px-2'}>Header 1</Section>
-            <Section classNames={'flex py-2 px-2 gap-2'}><MockFilter /><MockFilter /><MockFilter /><MockFilter /></Section>
+            <Section classNames={'flex py-2 px-2 gap-2 flex-wrap'}><MockFilter /><MockFilter /><MockFilter /><MockFilter /></Section>
         </Section>
 
 
-        <Section classNames={'flex items-center gap-2 px-10'}>
+        <Section classNames={'flex items-center gap-2 px-10 flex-wrap'}>
             Clear all
             <MockActiveFilter />
             <MockActiveFilter />
@@ -63,7 +63,7 @@ export default function Home() {
         </Section>
 
 
-        <Section classNames={'grid grid-cols-4 gap-8 px-10 py-2'}>
+        <Section classNames={'grid grid-cols-2 lg:grid-cols-4 gap-8 px-10 py-2'}>
             <ProductCard />
             <ProductCard />
             <ProductCard />
